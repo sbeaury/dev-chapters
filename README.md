@@ -42,7 +42,7 @@ node -v
 
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 
-3. Edit the book database in `data/books.yml` by adding an url, an image url, an alt attribute and tag (technology or stack).
+3. Edit the book database in `data/books.yaml` by adding an url, an image url, an alt attribute and tag (technology or stack).
 
 4. Commit your changes (`git commit -am 'Add some fooBar'`)
 
