@@ -15,7 +15,7 @@
 </div>
 
 <h4 align="center">
- :book: Find the best web dev ebooks out there. :book:
+ :books: Find the best web dev ebooks out there. :books:
   <br><br>
   Made with Vue and Bulma.
 </h4>
