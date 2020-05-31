@@ -1,0 +1,23 @@
+/* #*/ export const BOOKS = `
+
+- linkUrl: "https://www.newline.co/fullstack-d3"
+  imgUrl: "https://dzxbosgk90qga.cloudfront.net/fit-in/252x329/n/20190514165730060_Book%20Cover-900h.png"
+  alt: "d3.js image"
+  tag: "D3.js"
+
+- linkUrl: "https://www.roadtoreact.com"
+  imgUrl: "https://d2sofvawe08yqg.cloudfront.net/the-road-to-learn-react/hero2x?1582304980"
+  alt: "road to react image"
+  tag: "React"
+
+- linkUrl: "https://leanpub.com/ydkjsy-get-started"
+  imgUrl: "https://d2sofvawe08yqg.cloudfront.net/ydkjsy-get-started/hero?1580587360"
+  alt: "you don't know Javascript image"
+  tag: "Javascript"
+
+- linkUrl: "https://leanpub.com/ydkjsy-scope-closures"
+  imgUrl: "https://d2sofvawe08yqg.cloudfront.net/ydkjsy-scope-closures/hero?1583299851"
+  alt: "you don't know Javascript image"
+  tag: "Javascript"
+
+`
