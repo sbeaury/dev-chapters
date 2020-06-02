@@ -1,8 +1,9 @@
 <template>
-  <div
-    class="tag is-info is-light"
+  <span
+    class="tag"
+    v-bind:class="{ 'is-primary': isFilterOn}"
     @click="text!=='All'? filterBooks(text):clearFilter()"
-  >{{ text }}</div>
+  >{{ text }}</span>
 </template>
 
 <script>
@@ -11,7 +12,8 @@ export default {
   props: {
     text: String,
     filterBooks: Function,
-    clearFilter: Function
+    clearFilter: Function,
+    isFilterOn: Boolean
   }
 };
 </script>
