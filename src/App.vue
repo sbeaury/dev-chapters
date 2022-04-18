@@ -10,7 +10,11 @@
       <div class="level">
         <div class="level-item has-text-centered">
           <div class="tags">
-            <Tag text="All" :clearFilter="clearFilter" :isFilterOn="!isFilterOn" />
+            <Tag
+              text="All"
+              :clearFilter="clearFilter"
+              :isFilterOn="!isFilterOn"
+            />
             <Tag
               v-for="item in tags"
               :key="item.tag"
@@ -28,9 +32,9 @@
     <div class="footer">
       <p>
         {{ copyright }} Built with
-        <strong>
-          <a href="https://vuejs.org/">Vue</a>
-        </strong>.
+        <strong> <a href="https://vuejs.org/">Vue</a> </strong> and
+        <strong> <a href="https://bulma.io/">Bulma</a></strong
+        >.
       </p>
     </div>
   </div>
@@ -46,28 +50,28 @@ export default {
   name: "App",
   components: {
     Book,
-    Tag
+    Tag,
   },
   data() {
     return {
       books: yaml.load(BOOKS),
       tags: this.removeDuplicates(yaml.load(BOOKS)),
-      isFilterOn: false
+      isFilterOn: false,
     };
   },
   computed: {
     copyright() {
       const currentYear = new Date().getFullYear();
       return `© Sébastien Beaury ${currentYear}.`;
-    }
+    },
   },
   methods: {
     filterBooks(name) {
       this.isFilterOn = true;
       this.books = yaml.load(BOOKS);
-      this.books = this.books.filter(elt => elt.tag === name);
+      this.books = this.books.filter((elt) => elt.tag === name);
       this.tags = this.removeDuplicates(this.books).filter(
-        elt => elt.tag === name
+        (elt) => elt.tag === name
       );
     },
     clearFilter() {
@@ -79,15 +83,19 @@ export default {
       if (typeof arrayOfObjects !== undefined) {
         return arrayOfObjects.filter(
           (object, index) =>
-            index === arrayOfObjects.findIndex(obj => obj.tag === object.tag)
+            index === arrayOfObjects.findIndex((obj) => obj.tag === object.tag)
         );
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style>
+body {
+  height: 100%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -100,6 +108,10 @@ export default {
 
 h1 {
   font-family: "Inconsolata", monospace;
+}
+
+.wrapper {
+  min-height: calc(100% - 144px - 50px);
 }
 
 .shelf {

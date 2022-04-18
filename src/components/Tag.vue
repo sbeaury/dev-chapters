@@ -1,9 +1,10 @@
 <template>
   <span
     class="tag"
-    v-bind:class="{ 'is-primary': isFilterOn}"
-    @click="text!=='All'? filterBooks(text):clearFilter()"
-  >{{ text }}</span>
+    v-bind:class="{ 'is-primary': isFilterOn }"
+    @click="text !== 'All' ? filterBooks(text) : clearFilter()"
+    >{{ text }}</span
+  >
 </template>
 
 <script>
@@ -13,8 +14,8 @@ export default {
     text: String,
     filterBooks: Function,
     clearFilter: Function,
-    isFilterOn: Boolean
-  }
+    isFilterOn: Boolean,
+  },
 };
 </script>
 
@@ -23,6 +24,6 @@ export default {
   cursor: pointer;
 }
 .tag:not(body) {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 </style>
